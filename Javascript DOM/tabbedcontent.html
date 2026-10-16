@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabbed Content</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 5px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background-color: steelblue;
+            color: white;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Website</h1>
+
+    <div class="tabs">
+        <button class="tab active" data-target="home">Home</button>
+        <button class="tab" data-target="about">About</button>
+        <button class="tab" data-target="contact">Contact</button>
+    </div>
+
+    <div id="home" class="content active">
+        <h2>Home</h2>
+        <p>Welcome to my website!</p>
+    </div>
+
+    <div id="about" class="content">
+        <h2>About</h2>
+        <p>I am learning HTML, CSS and JavaScript.</p>
+    </div>
+
+    <div id="contact" class="content">
+        <h2>Contact</h2>
+        <p>Email: example@gmail.com</p>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll(".tab");
+        const contents = document.querySelectorAll(".content");
+
+        tabs.forEach(function(tab) {
+            tab.addEventListener("click", function() {
+
+                // Remove active class from all tabs
+                tabs.forEach(function(item) {
+                    item.classList.remove("active");
+                });
+
+                // Hide all content sections
+                contents.forEach(function(content) {
+                    content.classList.remove("active");
+                });
+
+                // Activate the clicked tab
+                tab.classList.add("active");
+
+                // Show the matching content
+                const targetId = tab.getAttribute("data-target");
+                document.getElementById(targetId).classList.add("active");
+            });
+        });
+    </script>
+
+</body>
+</html>

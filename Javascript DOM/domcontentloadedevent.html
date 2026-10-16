@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOMContentLoaded Example</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const heading = document.getElementById("myHeading");
+
+            heading.textContent = "DOM is Ready!";
+            heading.style.color = "green";
+        });
+    </script>
+</head>
+<body>
+
+    <h1 id="myHeading">Loading...</h1>
+    <p>The JavaScript runs after the HTML is parsed.</p>
+
+</body>
+</html>

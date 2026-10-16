@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Sets</title>
+</head>
+<body>
+    <h1>JavaScript Sets</h1>
+
+    <button onclick="showSet()">Show Unique Fruits</button>
+
+    <p id="result">Click the button!</p>
+
+    <script>
+        function showSet() {
+            const fruits = new Set([
+                "Apple",
+                "Mango",
+                "Apple",
+                "Banana",
+                "Mango"
+            ]);
+
+            document.getElementById("result").textContent =
+                "Unique fruits: " + [...fruits].join(", ") +
+                " | Total: " + fruits.size;
+        }
+    </script>
+</body>
+</html>

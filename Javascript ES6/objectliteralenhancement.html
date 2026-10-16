@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal Enhancement</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+
+    <button onclick="showStudent()">Show Details</button>
+
+    <p id="result">Click the button!</p>
+
+    <script>
+        function showStudent() {
+            let name = "Sanjana";
+            let age = 24;
+            let property = "city";
+
+            const student = {
+                name,
+                age,
+                [property]: "Pune",
+
+                introduce() {
+                    return `My name is ${this.name}, 
+                    I am ${this.age} years old and live in ${this.city}.`;
+                }
+            };
+
+            document.getElementById("result").textContent =
+                student.introduce();
+        }
+    </script>
+</body>
+</html>

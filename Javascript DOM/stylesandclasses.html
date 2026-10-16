@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Styles</title>
+</head>
+<body>
+
+    <h1 id="heading">Hello JavaScript!</h1>
+    <button id="btn">Change Style</button>
+
+    <script>
+        const heading = document.getElementById("heading");
+        const button = document.getElementById("btn");
+
+        button.addEventListener("click", function() {
+            heading.style.color = "blue";
+            heading.style.backgroundColor = "lightyellow";
+            heading.style.fontSize = "35px";
+            heading.style.padding = "10px";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox Example</title>
+</head>
+<body>
+
+    <h2>Select Your Skills</h2>
+
+    <input type="checkbox" id="html">
+    <label for="html">HTML</label>
+
+    <p id="result">Checkbox is not selected.</p>
+
+    <script>
+        const checkbox = document.getElementById("html");
+        const result = document.getElementById("result");
+
+        checkbox.addEventListener("change", function() {
+            if (checkbox.checked) {
+                result.textContent = "HTML is selected!";
+            } else {
+                result.textContent = "HTML is not selected.";
+            }
+        });
+    </script>
+
+</body>
+</html>

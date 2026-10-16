@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Traversing</title>
+</head>
+<body>
+
+    <div id="container">
+        <p id="first">First Paragraph</p>
+        <p id="second">Second Paragraph</p>
+        <p id="third">Third Paragraph</p>
+    </div>
+
+    <script>
+        const second = document.getElementById("second");
+
+        // Get parent element
+        console.log(second.parentElement);
+
+        // Get first child element of parent
+        console.log(second.parentElement.firstElementChild);
+
+        // Get last child element of parent
+        console.log(second.parentElement.lastElementChild);
+
+        // Get next sibling
+        console.log(second.nextElementSibling);
+
+        // Get previous sibling
+        console.log(second.previousElementSibling);
+    </script>
+
+</body>
+</html>

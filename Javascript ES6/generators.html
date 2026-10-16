@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Generators</title>
+</head>
+<body>
+    <h1>JavaScript Generators</h1>
+
+    <button onclick="showNext()">Show Next Number</button>
+
+    <p id="result">Click the button to start!</p>
+
+    <script>
+        function* countNumbers() {
+            yield 10;
+            yield 20;
+            yield 30;
+        }
+
+        const numbers = countNumbers();
+
+        function showNext() {
+            const result = numbers.next();
+
+            if (result.done) {
+                document.getElementById("result").textContent =
+                    "Generator finished!";
+            } else {
+                document.getElementById("result").textContent =
+                    "Number: " + result.value;
+            }
+        }
+    </script>
+</body>
+</html>

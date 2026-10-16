@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Async and Await Example</h2>
+
+    <script>
+        function getData() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Data received successfully!");
+                }, 2000);
+            });
+        }
+
+        async function displayData() {
+            console.log("Fetching data...");
+
+            const result = await getData();
+
+            console.log(result);
+        }
+
+        displayData();
+        console.log("Other work continues...");
+    </script>
+</body>
+</html>

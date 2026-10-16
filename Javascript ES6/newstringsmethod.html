@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+</head>
+<body>
+    <h1>New JavaScript String Methods</h1>
+
+    <button onclick="checkStrings()">Check Strings</button>
+
+    <p id="result">Click the button to see results.</p>
+
+    <script>
+        function checkStrings() {
+            let message = "Hello JavaScript";
+            let file = "index.html";
+            let word = "Hi ";
+
+            let result = `
+                Starts with Hello: ${message.startsWith("Hello")}
+                | Ends with .html: ${file.endsWith(".html")}
+                | Includes JavaScript: ${message.includes("JavaScript")}
+                | Repeat Hi: ${word.repeat(3)}
+            `;
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>
+

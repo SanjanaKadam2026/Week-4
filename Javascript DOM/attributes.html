@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Get Attribute</title>
+</head>
+<body>
+
+    <a id="myLink" href="https://www.google.com">
+        Open Google
+    </a>
+
+    <p id="result"></p>
+
+    <script>
+        const link = document.getElementById("myLink");
+
+        const address = link.getAttribute("href");
+
+        document.getElementById("result").textContent = address;
+    </script>
+
+</body>
+</html>

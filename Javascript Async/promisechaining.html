@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Promise Chaining</h2>
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      Promise.resolve(10)
+        .then((number) => {
+          return number + 5;
+        })
+        .then((number) => {
+          return number * 2;
+        })
+        .then((result) => {
+          document.getElementById("result").textContent =
+            "Final Result: " + result;
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  background: #243b55;
+  color: white;
+  padding: 30px 15px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 15px;
+}
+
+#search {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit, minmax(230px, 1fr)
+  );
+  gap: 18px;
+}
+
+.user-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #00000012;
+  overflow-wrap: anywhere;
+}
+
+.user-card h2 {
+  color: #243b55;
+  font-size: 20px;
+}
+
+#status {
+  margin: 15px 0;
+}

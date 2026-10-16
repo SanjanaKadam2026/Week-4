@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Strings</title>
+</head>
+<body>
+    <h1>JavaScript Template Strings</h1>
+
+    <button onclick="showDetails()">Show Details</button>
+
+    <p id="result">Click the button!</p>
+
+    <script>
+        function showDetails() {
+            let name = "Sanjana";
+            let course = "M.Sc. Computer Science";
+            let city = "Pune";
+
+            let message = `
+                Hello, ${name}! 
+                You completed ${course} and live in ${city}.
+            `;
+
+            document.getElementById("result").textContent = message;
+        }
+    </script>
+</body>
+</html>

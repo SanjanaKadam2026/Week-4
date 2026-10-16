@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Search Filter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Search Programming Languages</h1>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search languages..."
+    >
+
+    <ul id="languageList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>PHP</li>
+        <li>SQL</li>
+    </ul>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const items = document.querySelectorAll("#languageList li");
+
+        searchInput.addEventListener("input", function() {
+            const searchText = searchInput.value.toLowerCase();
+
+            items.forEach(function(item) {
+                const language = item.textContent.toLowerCase();
+
+                if (language.includes(searchText)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

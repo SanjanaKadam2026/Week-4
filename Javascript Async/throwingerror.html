@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Throwing Errors</h2>
+  <button onclick="checkAge()">Check Age</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAge() {
+      let age = 16;
+
+      if (age < 18) {
+        throw new Error("You must be 18 or older!");
+      }
+
+      document.getElementById("result").textContent =
+        "Access granted!";
+    }
+
+    document.getElementById("result").textContent = "Ready!";
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Promise Example</h2>
+  <button onclick="checkResult()">Check Result</button>
+  <p id="result"></p>
+
+  <script>
+    function checkResult() {
+      const myPromise = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("Task completed successfully!");
+        }, 2000);
+      });
+
+      myPromise.then((message) => {
+        document.getElementById("result").textContent = message;
+      });
+    }
+  </script>
+</body>
+</html>

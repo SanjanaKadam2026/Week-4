@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Data Practice</title>
+</head>
+<body>
+  <h2>Student Details</h2>
+  <button id="showBtn">Show Details</button>
+  <p id="output"></p>
+
+  <script>
+    const jsonData = `{
+      "name": "Sanjana",
+      "course": "Computer Science",
+      "city": "Pune"
+    }`;
+
+    function displayStudent(student) {
+      document.getElementById("output").innerHTML =
+        "Name: " + student.name + "<br>" +
+        "Course: " + student.course + "<br>" +
+        "City: " + student.city;
+    }
+
+    document.getElementById("showBtn").addEventListener("click", function () {
+      const student = JSON.parse(jsonData);
+      displayStudent(student);
+    });
+  </script>
+</body>
+</html>

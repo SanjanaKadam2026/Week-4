@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Let Example</title>
+</head>
+<body>
+    <h1>JavaScript Let Keyword</h1>
+
+    <p id="result">Marks: 50</p>
+
+    <button onclick="changeMarks()">Change Marks</button>
+
+    <script>
+        let marks = 50;
+
+        function changeMarks() {
+            marks = 75;
+
+            document.getElementById("result").innerHTML =
+                "Updated Marks: " + marks;
+        }
+    </script>
+</body>
+</html>

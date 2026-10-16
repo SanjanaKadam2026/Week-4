@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>JavaScript Arrow Functions</h1>
+
+    <button onclick="showMessage()">Show Greeting</button>
+    <button onclick="showSum()">Calculate Sum</button>
+
+    <p id="result">Click a button!</p>
+
+    <script>
+        const greet = (name) => `Hello, ${name}!`;
+
+        const add = (a, b) => a + b;
+
+        function showMessage() {
+            document.getElementById("result").textContent =
+                greet("Sanjana");
+        }
+
+        function showSum() {
+            document.getElementById("result").textContent =
+                `Sum: ${add(10, 20)}`;
+        }
+    </script>
+</body>
+</html>
